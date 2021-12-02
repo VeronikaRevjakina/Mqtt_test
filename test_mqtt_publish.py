@@ -1,9 +1,10 @@
-import sys
-import paho.mqtt.client as mqtt
-import time
-import random
 import os
+import random
+import sys
+import time
+import logging
 
+import paho.mqtt.client as mqtt
 from Sparkplug.client_libraries.python import sparkplug_b
 from Sparkplug.client_libraries.python.sparkplug_b import *
 
@@ -12,9 +13,20 @@ sys.path.insert(0, "../client_libraries/python/")
 brocker_host = os.environ['BROCKER_HOST']
 topic = os.environ['TOPIC']
 
+logger = logging.getLogger()
+logging.basicConfig(stream=sys.stdout, level=logging.INFO)
+
+
+def _generate_bool():
+    return random.choice([True, False])
+
+
 # The callback for when the client receives a CONNACK response from the server.
 def on_connect(mqttc, obj, flags, rc):
-    print("Connected with result code " + str(rc))
+    if rc == 0:
+        logger.info('Connected to the broker. Code: %s', rc)
+    else:
+        logger.info('Failed to connected to the broker. Code: %s', rc)
 
 
 def on_publish(mqttc, obj, mid):
@@ -43,31 +55,37 @@ def publishDeviceBirth():
     client.publish(topic, totalByteArray, 0, False)
 
 
-print("Start")
-client = mqtt.Client()
-client.on_connect = on_connect
-client.on_message = on_message
-client.on_publish = on_publish
+def publishDData():
+    while True:
+        inboundPayload = sparkplug_b.getDdataPayload()
+        addMetric(inboundPayload, "", 154, MetricDataType.Boolean, _generate_bool())
+        addMetric(inboundPayload, "", 155, MetricDataType.Boolean, _generate_bool())
+        byteArray = bytearray(inboundPayload.SerializeToString())
 
-client.connect(brocker_host, 1883, 60)
+        print("Publishing DDATA")
+        infot = client.publish(topic, byteArray, qos=1)
+        # infot.wait_for_publish()
 
-time.sleep(.1)
-client.loop()
+        # Sit and wait for inbound or outbound events
+        for _ in range(50):
+            time.sleep(.1)
+            client.loop()
 
-# Publish the birth certificates
-publishDeviceBirth()
 
-while True:
-    inboundPayload = sparkplug_b.getDdataPayload()
-    addMetric(inboundPayload, "", 154, MetricDataType.Boolean, random.choice([True, False]))
-    addMetric(inboundPayload, "", 155, MetricDataType.Boolean, random.choice([True, False]))
-    byteArray = bytearray(inboundPayload.SerializeToString())
+if __name__ == '__main__':
+    print("Start")
+    client = mqtt.Client()
+    client.on_connect = on_connect
+    client.on_message = on_message
+    client.on_publish = on_publish
 
-    print("publishing")
-    infot = client.publish(topic, byteArray, qos=1)
-    # infot.wait_for_publish()
+    client.connect(brocker_host, 1883, 60)
 
-    # Sit and wait for inbound or outbound events
-    for _ in range(50):
-        time.sleep(.1)
-        client.loop()
+    time.sleep(.1)
+    client.loop()
+
+    # Publish the birth certificates
+    publishDeviceBirth()
+    
+    #Publish DDATA messages
+    publishDData()
