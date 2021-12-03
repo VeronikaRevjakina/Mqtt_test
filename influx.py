@@ -1,7 +1,8 @@
 from influxdb_client import InfluxDBClient
+import os
 
-my_token = ""
-my_org = ""
+my_token = os.environ.get('INFLUX_TOKEN')
+my_org = "ver"
 
 if __name__ == '__main__':
     client = InfluxDBClient(url="http://localhost:8086", token=my_token, org=my_org)
