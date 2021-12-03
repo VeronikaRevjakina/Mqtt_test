@@ -25,7 +25,7 @@
           "value": 192
         }
       },
-      "value": false
+      "value": 7.9
     },
     {
       "name": "MFG/LS3/PM13/MM/General/Cycle Time/By Station/St2 - Airlock",
@@ -51,7 +51,7 @@
           "value": 192
         }
       },
-      "value": false
+      "value": 33.8
     },
     {
       "name": "MFG/LS3/PM13/MM/General/Cycle Time/By Station/St3 - Dosing",
@@ -77,13 +77,13 @@
           "value": 192
         }
       },
-      "value": 0
+      "value": 0.88
     },
     {
       "name": "MFG/LS3/PM13/MM/General/Cycle Time/By Station/St4 - Mating",
       "alias": 15656,
       "timestamp": 1637340152768,
-      "dataType": "Double",
+      "dataType": "Int32",
       "metaData": {
         "contentType": "",
         "size": 0,
@@ -103,13 +103,13 @@
           "value": 192
         }
       },
-      "value": false
+      "value": 10
     },
     {
       "name": "MFG/LS3/PM13/MM/General/Cycle Time/By Station/St5 - Forming",
       "alias": 14050,
       "timestamp": 1637340152768,
-      "dataType": "Double",
+      "dataType": "Int16",
       "metaData": {
         "contentType": "",
         "size": 0,
@@ -129,7 +129,7 @@
           "value": 192
         }
       },
-      "value": false
+      "value": 15
     },
     {
       "name": "MFG/LS3/PM13/MM/General/Cycle Time/By Station/St6 - RMM",
@@ -161,7 +161,7 @@
       "name": "MFG/LS3/PM13/MM/General/Cycle Time/By State/Process (Stations)",
       "alias": 15015,
       "timestamp": 1637340152768,
-      "dataType": "Double",
+      "dataType": "String",
       "metaData": {
         "contentType": "",
         "size": 0,
@@ -181,7 +181,7 @@
           "value": 192
         }
       },
-      "value": false
+      "value": "hello"
     },
     {
       "name": "MFG/LS3/PM13/MM/General/Cycle Time/By State/Transport",
@@ -207,13 +207,13 @@
           "value": 192
         }
       },
-      "value": false
+      "value": 66.8
     },
     {
       "name": "MFG/LS3/PM13/MM/General/Cycle Time/Overall/MM Cycletime",
       "alias": 15373,
       "timestamp": 1637340152768,
-      "dataType": "Double",
+      "dataType": "Float",
       "metaData": {
         "contentType": "",
         "size": 0,
@@ -233,13 +233,13 @@
           "value": 192
         }
       },
-      "value": false
+      "value": 55.55
     },
     {
       "name": "MFG/LS3/PM13/MM/General/Cycle Time/By State/Sync (Wait EM)",
       "alias": 13818,
       "timestamp": 1637340152768,
-      "dataType": "Double",
+      "dataType": "Boolean",
       "metaData": {
         "contentType": "",
         "size": 0,
@@ -259,7 +259,7 @@
           "value": 192
         }
       },
-      "value": false
+      "value": true
     },
     {
       "name": "MFG/LS3/PM13/MM/General/Cycle Time/Overall/PM Cycletime",
