@@ -18,4 +18,4 @@ Then subscribe to the topic you provide in parameters:
 
 **docker run --rm -it   --link mq   ruimarinho/mosquitto mosquitto_sub -h mq -t "#"**
 
-and you'll see ddata.json messages through subscriber.
+and you'll see ddata.json messages in sparkplug format through subscriber.
