@@ -1,0 +1,291 @@
+{
+  "timestamp": 1637340152768,
+  "metrics": [
+    {
+      "name": "MFG/LS3/PM13/MM/General/Cycle Time/By Station/St1 - RFID",
+      "alias": 14469,
+      "timestamp": 1637340152768,
+      "dataType": "Double",
+      "metaData": {
+        "contentType": "",
+        "size": 0,
+        "seq": 0,
+        "fileName": "",
+        "fileType": "",
+        "md5": "",
+        "description": ""
+      },
+      "properties": {
+        "sourceTagPath": {
+          "type": "String",
+          "value": "[MQTT Engine]/EdgeNodes/ls3_0/tm13/plc/fbictstacking(4)/fbistackingzcylinder/boutsetoutputwps"
+        },
+        "Quality": {
+          "type": "Int32",
+          "value": 192
+        }
+      },
+      "value": false
+    },
+    {
+      "name": "MFG/LS3/PM13/MM/General/Cycle Time/By Station/St2 - Airlock",
+      "alias": 13883,
+      "timestamp": 1637340152768,
+      "dataType": "Double",
+      "metaData": {
+        "contentType": "",
+        "size": 0,
+        "seq": 0,
+        "fileName": "",
+        "fileType": "",
+        "md5": "",
+        "description": ""
+      },
+      "properties": {
+        "sourceTagPath": {
+          "type": "String",
+          "value": "[MQTT Engine]/EdgeNodes/ls3_0/tm13/plc/afbisuctiongripper(2)/boutmsgmovenoswpsbusy"
+        },
+        "Quality": {
+          "type": "Int32",
+          "value": 192
+        }
+      },
+      "value": false
+    },
+    {
+      "name": "MFG/LS3/PM13/MM/General/Cycle Time/By Station/St3 - Dosing",
+      "alias": 14518,
+      "timestamp": 1637340152768,
+      "dataType": "Double",
+      "metaData": {
+        "contentType": "",
+        "size": 0,
+        "seq": 0,
+        "fileName": "",
+        "fileType": "",
+        "md5": "",
+        "description": ""
+      },
+      "properties": {
+        "sourceTagPath": {
+          "type": "String",
+          "value": "[MQTT Engine]/EdgeNodes/ls3_0/tm13/plc/st360ctstacker(4)/istep"
+        },
+        "Quality": {
+          "type": "Int32",
+          "value": 192
+        }
+      },
+      "value": 0
+    },
+    {
+      "name": "MFG/LS3/PM13/MM/General/Cycle Time/By Station/St4 - Mating",
+      "alias": 15656,
+      "timestamp": 1637340152768,
+      "dataType": "Double",
+      "metaData": {
+        "contentType": "",
+        "size": 0,
+        "seq": 0,
+        "fileName": "",
+        "fileType": "",
+        "md5": "",
+        "description": ""
+      },
+      "properties": {
+        "sourceTagPath": {
+          "type": "String",
+          "value": "[MQTT Engine]/EdgeNodes/ls3_0/tm13/plc/fbipredosingtrack(3)/fbidosingaxle/b_out_msg_soft_error"
+        },
+        "Quality": {
+          "type": "Int32",
+          "value": 192
+        }
+      },
+      "value": false
+    },
+    {
+      "name": "MFG/LS3/PM13/MM/General/Cycle Time/By Station/St5 - Forming",
+      "alias": 14050,
+      "timestamp": 1637340152768,
+      "dataType": "Double",
+      "metaData": {
+        "contentType": "",
+        "size": 0,
+        "seq": 0,
+        "fileName": "",
+        "fileType": "",
+        "md5": "",
+        "description": ""
+      },
+      "properties": {
+        "sourceTagPath": {
+          "type": "String",
+          "value": "[MQTT Engine]/EdgeNodes/ls3_0/tm13/plc/afbisuctiongripper(6)/binmoveoswps"
+        },
+        "Quality": {
+          "type": "Int32",
+          "value": 192
+        }
+      },
+      "value": false
+    },
+    {
+      "name": "MFG/LS3/PM13/MM/General/Cycle Time/By Station/St6 - RMM",
+      "alias": 14129,
+      "timestamp": 1637340152768,
+      "dataType": "Double",
+      "metaData": {
+        "contentType": "",
+        "size": 0,
+        "seq": 0,
+        "fileName": "",
+        "fileType": "",
+        "md5": "",
+        "description": ""
+      },
+      "properties": {
+        "sourceTagPath": {
+          "type": "String",
+          "value": "[MQTT Engine]/EdgeNodes/ls3_0/tm13/plc/stncproductloaderzout/iactualtorque"
+        },
+        "Quality": {
+          "type": "Int32",
+          "value": 192
+        }
+      },
+      "value": -14
+    },
+    {
+      "name": "MFG/LS3/PM13/MM/General/Cycle Time/By State/Process (Stations)",
+      "alias": 15015,
+      "timestamp": 1637340152768,
+      "dataType": "Double",
+      "metaData": {
+        "contentType": "",
+        "size": 0,
+        "seq": 0,
+        "fileName": "",
+        "fileType": "",
+        "md5": "",
+        "description": ""
+      },
+      "properties": {
+        "sourceTagPath": {
+          "type": "String",
+          "value": "[MQTT Engine]/EdgeNodes/ls3_0/tm13/plc/afbistopperctbuffer(6)/boutmsgstaticreleasesignal"
+        },
+        "Quality": {
+          "type": "Int32",
+          "value": 192
+        }
+      },
+      "value": false
+    },
+    {
+      "name": "MFG/LS3/PM13/MM/General/Cycle Time/By State/Transport",
+      "alias": 14493,
+      "timestamp": 1637340152768,
+      "dataType": "Double",
+      "metaData": {
+        "contentType": "",
+        "size": 0,
+        "seq": 0,
+        "fileName": "",
+        "fileType": "",
+        "md5": "",
+        "description": ""
+      },
+      "properties": {
+        "sourceTagPath": {
+          "type": "String",
+          "value": "[MQTT Engine]/EdgeNodes/ls3_0/tm13/plc/st360ctstacker(7)/bstart"
+        },
+        "Quality": {
+          "type": "Int32",
+          "value": 192
+        }
+      },
+      "value": false
+    },
+    {
+      "name": "MFG/LS3/PM13/MM/General/Cycle Time/Overall/MM Cycletime",
+      "alias": 15373,
+      "timestamp": 1637340152768,
+      "dataType": "Double",
+      "metaData": {
+        "contentType": "",
+        "size": 0,
+        "seq": 0,
+        "fileName": "",
+        "fileType": "",
+        "md5": "",
+        "description": ""
+      },
+      "properties": {
+        "sourceTagPath": {
+          "type": "String",
+          "value": "[MQTT Engine]/EdgeNodes/ls3_0/tm13/plc/st330rotatingstopper(6)/breset"
+        },
+        "Quality": {
+          "type": "Int32",
+          "value": 192
+        }
+      },
+      "value": false
+    },
+    {
+      "name": "MFG/LS3/PM13/MM/General/Cycle Time/By State/Sync (Wait EM)",
+      "alias": 13818,
+      "timestamp": 1637340152768,
+      "dataType": "Double",
+      "metaData": {
+        "contentType": "",
+        "size": 0,
+        "seq": 0,
+        "fileName": "",
+        "fileType": "",
+        "md5": "",
+        "description": ""
+      },
+      "properties": {
+        "sourceTagPath": {
+          "type": "String",
+          "value": "[MQTT Engine]/EdgeNodes/ls3_0/tm13/plc/st341suctiongripper(7)/bhomeposition"
+        },
+        "Quality": {
+          "type": "Int32",
+          "value": 192
+        }
+      },
+      "value": false
+    },
+    {
+      "name": "MFG/LS3/PM13/MM/General/Cycle Time/Overall/PM Cycletime",
+      "alias": 15536,
+      "timestamp": 1637340152768,
+      "dataType": "Double",
+      "metaData": {
+        "contentType": "",
+        "size": 0,
+        "seq": 0,
+        "fileName": "",
+        "fileType": "",
+        "md5": "",
+        "description": ""
+      },
+      "properties": {
+        "sourceTagPath": {
+          "type": "String",
+          "value": "[MQTT Engine]/EdgeNodes/ls3_0/tm13/plc/fbipredosingtrack(7)/fbidosingaxle/r64_in_max_position"
+        },
+        "Quality": {
+          "type": "Int32",
+          "value": 192
+        }
+      },
+      "value": 2.1
+    }
+  ]
+}
