@@ -8,6 +8,8 @@ import paho.mqtt.client as mqtt
 from Sparkplug.client_libraries.python import sparkplug_b
 from Sparkplug.client_libraries.python.sparkplug_b import *
 
+AMOUNT_OF_PUBLISHED_TRIES = 5
+
 DDATA_FILE_NAME = 'ddata'
 
 sys.path.insert(0, "../client_libraries/python/")
@@ -65,8 +67,8 @@ def publish_dbirth(dbirth):
     client.publish(topic, total_byte_array, 0, False)
 
 
-def publish_ddata(ddata):
-    while True:
+def publish_ddata(ddata, mid):
+    while mid <= AMOUNT_OF_PUBLISHED_TRIES:
         inbound_payload = sparkplug_b.getDdataPayload()
         __add_ddata_metric_from_json(inbound_payload, ddata)
 
